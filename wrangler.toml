@@ -1,0 +1,10 @@
+name = "utasin"
+compatibility_date = "2026-04-16"
+
+[site]
+bucket = "."
+
+[env.production]
+routes = [
+  { pattern = "utas.in", custom_domain = true }
+]

@@ -1,0 +1,2 @@
+# Redirect www to apex
+https://www.utas.in/* https://utas.in/:splat 301
