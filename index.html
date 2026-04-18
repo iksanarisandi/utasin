@@ -7,7 +7,7 @@
 
     <!-- SEO Meta Tags -->
     <title>Utas.in — Auto Posting & Auto Komen Threads | Mulai Gratis</title>
-    <meta name="description" content="Utas.in — tools auto posting dan auto komen Threads. Jadwalkan postingan hingga 1 bulan ke depan, balas komentar otomatis dengan berbagai template. Mulai gratis, mulai Rp35/komen.">
+    <meta name="description" content="Utas.in — tools auto posting dan auto komen Threads. Jadwalkan postingan hingga 1 bulan ke depan, balas komentar otomatis dengan berbagai template. Mulai gratis, mulai Rp35/komen, Rp70/utas.">
     <meta name="keywords" content="auto posting threads, auto komen threads, threads bot, jadwal posting threads, auto reply threads, tools threads indonesia, utasin, utas.in, marketing threads, engagement threads, auto komentar threads, scheduled post threads">
     <meta name="author" content="Utas.in">
     <meta name="robots" content="index, follow">
@@ -41,7 +41,7 @@
         "@type": "SoftwareApplication",
         "name": "Utas.in",
         "url": "https://utas.in",
-        "description": "Tools auto posting dan auto komen Threads. Jadwalkan postingan hingga 1 bulan ke depan, balas komentar otomatis dengan berbagai template. Mulai gratis, mulai Rp35/komen.",
+        "description": "Tools auto posting dan auto komen Threads. Jadwalkan postingan hingga 1 bulan ke depan, balas komentar otomatis dengan berbagai template. Mulai gratis, mulai Rp35/komen, Rp70/utas.",
         "applicationCategory": "BusinessApplication",
         "operatingSystem": "Web",
         "offers": {
@@ -100,6 +100,8 @@
         html {
             scroll-behavior: smooth;
             font-size: 16px;
+            max-width: 100vw;
+            overflow-x: hidden;
         }
 
         body {
@@ -108,6 +110,7 @@
             color: var(--white);
             line-height: 1.6;
             overflow-x: hidden;
+            max-width: 100vw;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
@@ -127,6 +130,8 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 24px;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         .section {
@@ -173,6 +178,7 @@
             z-index: 1000;
             padding: 0 24px;
             transition: all 0.3s ease;
+            max-width: 100vw;
         }
 
         .navbar.scrolled {
@@ -260,6 +266,7 @@
             position: relative;
             padding-top: 72px;
             overflow: hidden;
+            max-width: 100vw;
         }
 
         .hero::before {
@@ -431,6 +438,8 @@
             display: flex;
             flex-direction: column;
             transition: all 0.3s;
+            min-width: 0;
+            overflow: hidden;
         }
 
         .pricing-card:hover {
@@ -546,6 +555,7 @@
             border: 1px solid var(--dark-border);
             border-radius: 16px;
             overflow: hidden;
+            max-width: 100%;
         }
 
         .feature-card {
@@ -837,6 +847,7 @@
             display: flex;
             align-items: center;
             gap: 12px;
+            max-width: calc(100vw - 24px);
         }
 
         .wa-tooltip {
@@ -995,12 +1006,27 @@
 
             .wa-float {
                 bottom: 20px;
-                right: 20px;
+                right: 16px;
+                left: 16px;
+                justify-content: flex-end;
+            }
+
+            .wa-tooltip {
+                display: none;
             }
 
             .wa-btn {
                 width: 54px;
                 height: 54px;
+                flex-shrink: 0;
+            }
+
+            .pricing-card {
+                padding: 32px 20px;
+            }
+
+            .benefit-card {
+                padding: 28px 20px;
             }
         }
 
@@ -1146,8 +1172,8 @@
                 </div>
                 <div class="benefit-card">
                     <div class="benefit-tag">Keamanan</div>
-                    <h3>Aman & Resmi</h3>
-                    <p>Utas.in menggunakan API resmi dari Meta (Threads API). Setiap operasi sesuai kebijakan platform, jadi akun kamu tetap aman.</p>
+                    <h3>Menggunakan API Resmi Meta</h3>
+                    <p>Utas.in menggunakan API resmi dari Meta (Threads API). Meskipun demikian, kami tidak menjamin anti-banned karena banyak faktor dari Meta sendiri, dan penggunaan automasi atau bot secara berlebihan tetap berisiko.</p>
                 </div>
             </div>
         </div>
@@ -1185,14 +1211,14 @@
                         </div>
                         <div class="pricing-price-item">
                             <span class="pricing-price">Rp70</span>
-                            <span class="pricing-unit">/post</span>
+                            <span class="pricing-unit">/utas</span>
                         </div>
                     </div>
                     <ul class="pricing-features">
                         <li>Semua fitur Free</li>
                         <li>Schedule hingga 30 hari</li>
+                        <li>Maks. 10 template auto reply</li>
                         <li>Berbagai macam template</li>
-                        <li>Kredit tanpa batas</li>
                         <li>Prioritas eksekusi</li>
                     </ul>
                     <a href="https://komen.autos" target="_blank" rel="noopener" class="btn-primary" style="width:100%;justify-content:center;">Upgrade Sekarang</a>
@@ -1216,7 +1242,16 @@
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Sangat aman. Utas.in menggunakan API resmi dari Meta (Threads API) untuk semua operasi posting dan komentar. Artinya, setiap aksi yang dilakukan sesuai dengan kebijakan platform dan tidak melanggar terms of service Threads.</p>
+                        <p>Utas.in menggunakan API resmi dari Meta (Threads API) untuk semua operasi posting dan komentar. Namun, kami tidak menjamin akun Anda 100% aman dari banned karena banyak faktor dari Meta sendiri. Selama Anda tidak menggunakan dengan berlebihan, akun tetap aman.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Apakah anti banned?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Kami tidak menjamin anti banned. Meskipun menggunakan API resmi Meta, penggunaan automasi yang berlebihan tetap berisiko. Selama Anda tidak menggunakan dengan berlebihan, akun tetap aman.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -1225,7 +1260,7 @@
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Utas.in bisa kamu pakai gratis selamanya. Untuk fitur lebih lengkap seperti schedule 30 hari dan multiple akun, paket berbayar mulai dari Rp35/komen dan Rp70/post.</p>
+                        <p>Utas.in bisa kamu pakai gratis selamanya. Untuk fitur lebih lengkap, paket berbayar mulai dari Rp35/komen dan Rp70/utas (bukan per posting).</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -1275,6 +1310,7 @@
                 <ul class="footer-links">
                     <li><a href="#fitur">Fitur</a></li>
                     <li><a href="#faq">FAQ</a></li>
+                    <li><a href="http://s.id/testerapp" target="_blank" rel="noopener">Join Grup Tester</a></li>
                     <li><a href="https://wa.me/6282347303153" target="_blank" rel="noopener">WhatsApp</a></li>
                 </ul>
             </div>
